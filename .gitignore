@@ -1,3 +1,5 @@
 .venv/
 data/
+notes.py
+notes/
 __pycache__/
