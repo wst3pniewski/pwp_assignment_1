@@ -105,17 +105,17 @@ class SimpleETL:
 if __name__ == "__main__":
     DATA_DIR = Path("data")
     file_path = DATA_DIR / "example.csv"
-    #     get_file("https://oleksandr-fedoruk.com/sggw/podyplomowe/file", file_path)
-    #
-    #     try:
-    #         get_file("https://oleksandr-fedoruk.com/sggw/podyplomowe/403", file_path)
-    #     except AccessDeniedError as e:
-    #         print(e)
-    #
-    #     try:
-    #         get_file("https://oleksandr-fedoruk.com/sggw/podyplomowe/404", file_path)
-    #     except NotFoundError as e:
-    #         print(e)
+    get_file("https://oleksandr-fedoruk.com/sggw/podyplomowe/file", file_path)
+
+    try:
+        get_file("https://oleksandr-fedoruk.com/sggw/podyplomowe/403", file_path)
+    except AccessDeniedError as e:
+        print(e)
+
+    try:
+        get_file("https://oleksandr-fedoruk.com/sggw/podyplomowe/404", file_path)
+    except NotFoundError as e:
+        print(e)
 
     etl = SimpleETL(input_path=file_path)
     etl.load(
